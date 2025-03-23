@@ -3,10 +3,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    text-rendering: optimizeSpeed;
+    font-family: 'Montserrat', sans-serif; /* Professional font */
+    text-rendering: optimizeLegibility;
     user-select: none;
 }
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap');
 
 /* Multiple Animated Backgrounds */
 body {
@@ -14,160 +17,39 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    color: #fff;
-    overflow: hidden;
-    perspective: 3000px;
-    animation: bgWave 15s infinite alternate;
-}
-
-@keyframes bgWave {
-    0% {
-        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    }
-    100% {
-        background: linear-gradient(135deg, #2c5364, #203a43, #0f2027);
-    }
-}
-
-.container {
-    background: rgba(255, 255, 255, 0.15);
-    padding: 40px;
-    border-radius: 25px;
-    box-shadow: 0 15px 60px rgba(255, 0, 255, 0.9);
-    text-align: center;
-    max-width: 600px;
-    width: 100%;
-    animation: godGlow 2s infinite alternate, floatUpDown 6s infinite ease-in-out, cosmicRotate 8s infinite linear;
-    transform-style: preserve-3d;
-    /* transform: rotateY(20deg) rotateX(10deg) translateZ(80px); */
-}
-
-/* @keyframes cosmicRotate {
-    0% {
-        transform: rotateY(20deg) rotateX(10deg) translateZ(80px);
-    }
-    50% {
-        transform: rotateY(-20deg) rotateX(-10deg) translateZ(80px);
-    }
-    100% {
-        transform: rotateY(20deg) rotateX(10deg) translateZ(80px);
-    } */
-/* } */
-
-h1 {
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    text-shadow: 10px 10px 30px #000;
-    animation: neonGlow 2s infinite alternate;
-}
-
-@keyframes neonGlow {
-    from { text-shadow: 0 0 15px #fff; }
-    to { text-shadow: 0 0 30px #ff0, 0 0 50px #ff00ff; }
-}
-
-#search-btn {
-    padding: 18px 35px;
-    border: none;
-    border-radius: 15px;
-    background: linear-gradient(135deg, #ff00ff, #ff6600);
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
-    box-shadow: 0 10px 40px rgba(255, 0, 255, 0.8);
-    transition: all 0.3s;
-    animation: ultimatePulse 1.2s infinite alternate;
-}
-
-@keyframes ultimatePulse {
-    from {
-        box-shadow: 0 10px 40px rgba(255, 0, 255, 0.8);
-    }
-    to {
-        box-shadow: 0 20px 60px rgba(255, 255, 0, 0.9);
-    }
-}
-
-.weather-info .icon {
-    width: 120px;
-    height: 120px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-    color: #ff0;
-    box-shadow: 0 10px 40px rgba(255, 0, 255, 0.8);
-    animation: cosmicSpin 4s infinite linear, gravityBounce 3s infinite ease-in-out;
-}
-
-@keyframes gravityBounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-15px);
-    }
-}
-/* ULTRA MODERN REALISTIC STYLING WITH ADVANCED ANIMATIONS AND GLASSMORPHISM EFFECTS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
-    background-size: 400% 400%;
-    animation: gradientBG 10s infinite alternate ease-in-out;
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460, #ff0099, #00ffff);
+    background-size: 400% 400%; /* Larger background size for smoother animation */
+    animation: bgShift 15s infinite ease-in-out, bgWave 20s infinite alternate;
     color: #ffffff;
     perspective: 2000px;
-    overflow: hidden;
+    overflow: auto;
     flex-direction: column;
-    padding: 20px;
+    padding: 10px; /* Reduced padding to minimize top and bottom spacing */
 }
 
+/* Smooth Background Shift Animation */
 @keyframes bgShift {
     0% { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-/* Weather-specific effects */
-.rainy {
-    background: url('rain.gif') center/cover;
+/* Smooth Hue Rotation Animation */
+@keyframes bgWave {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
 }
 
-.windy {
-    background: url('wind.gif') center/cover;
-}
-
-.cool {
-    background: linear-gradient(-45deg, #87CEEB, #4682B4);
-}
-
-.hot {
-    background: linear-gradient(-45deg, #FF4500, #FF6347);
-}
-
-.humid {
-    background: linear-gradient(-45deg, #3A7BD5, #3A6073);
-}
-
+/* Glassmorphic Container */
 .container {
     background: rgba(255, 255, 255, 0.1);
-    padding: 40px;
+    padding: 20px; /* Reduced padding for better centering */
     border-radius: 20px;
     box-shadow: 0 10px 50px rgba(0, 0, 0, 0.4);
     text-align: center;
-    max-width: 500px;
-    width: 100%;
+    max-width: 600px;
+    width: 90%;
+    margin: 10px auto; /* Reduced top and bottom margin */
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     transform-style: preserve-3d;
@@ -175,19 +57,21 @@ body {
 }
 
 .container:hover {
-    transform: scale(1.05) rotateY(5deg);
+    transform: scale(1.05);
     box-shadow: 0 15px 80px rgba(0, 255, 255, 0.7);
 }
 
-/* Glowing Text Animation */
+/* Glowing Text Animation with Pro Font */
 h1 {
+    font-family: 'Playfair Display', serif; /* Elegant serif font */
     font-size: 3rem;
-    font-weight: 800;
+    font-weight: 700;
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 4px 4px 20px rgba(0, 255, 255, 0.8);
     animation: textGlow 2s infinite alternate;
+    margin-bottom: 15px; /* Reduced margin for better spacing */
 }
 
 @keyframes textGlow {
@@ -210,7 +94,7 @@ h1 {
     padding: 14px;
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     outline: none;
     background: rgba(255, 255, 255, 0.1);
     color: #ffffff;
@@ -231,11 +115,11 @@ h1 {
     border-radius: 10px;
     background: linear-gradient(135deg, #00ffea, #008080);
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
     transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
-    animation: pulse 2s infinite;
+    /* animation: pulse 2s infinite; */
     min-width: 150px;
 }
 
@@ -254,7 +138,7 @@ h1 {
 /* Weather Info Styling */
 .weather-info {
     display: none;
-    margin-top: 20px;
+    margin-top: 15px; /* Reduced margin for better centering */
     padding: 20px;
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.2);
@@ -270,6 +154,7 @@ h1 {
 }
 
 .weather-info h2 {
+    font-family: 'Playfair Display', serif; /* Elegant serif font */
     font-size: 2rem;
     font-weight: 700;
     color: #00ffea;
@@ -278,7 +163,7 @@ h1 {
 }
 
 .weather-info p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
     margin: 5px 0;
 }
@@ -292,15 +177,15 @@ h1 {
 
 /* 3D Floating Weather Icon */
 .weather-info .icon {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     margin: 15px auto;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     color: #00ffea;
     animation: rotateIcon 3s linear infinite, floating 3s infinite alternate ease-in-out;
 }
@@ -312,27 +197,17 @@ h1 {
 
 @keyframes floating {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
+    50% { transform: translateY(-10px); }
 }
 
 /* Responsive Enhancements */
-.container {
-    width: 90%;
-    max-width: 600px;
-    padding: 40px;
-}
-
 @media (max-width: 768px) {
-    .container {
-        padding: 30px;
-    }
-
     h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
-    .search {
-        flex-direction: column;
+    .container {
+        padding: 15px;
     }
 
     #city-input, #search-btn {
@@ -342,6 +217,14 @@ h1 {
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .weather-info h2 {
+        font-size: 1.2rem;
+    }
+
+    .weather-info .temperature {
+        font-size: 1.5rem;
     }
 }
