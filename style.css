@@ -1,0 +1,347 @@
+/* GOD MODE CSS - Beyond Ultra Level Effects */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-rendering: optimizeSpeed;
+    user-select: none;
+}
+
+/* Multiple Animated Backgrounds */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    overflow: hidden;
+    perspective: 3000px;
+    animation: bgWave 15s infinite alternate;
+}
+
+@keyframes bgWave {
+    0% {
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    }
+    100% {
+        background: linear-gradient(135deg, #2c5364, #203a43, #0f2027);
+    }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 15px 60px rgba(255, 0, 255, 0.9);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    animation: godGlow 2s infinite alternate, floatUpDown 6s infinite ease-in-out, cosmicRotate 8s infinite linear;
+    transform-style: preserve-3d;
+    /* transform: rotateY(20deg) rotateX(10deg) translateZ(80px); */
+}
+
+/* @keyframes cosmicRotate {
+    0% {
+        transform: rotateY(20deg) rotateX(10deg) translateZ(80px);
+    }
+    50% {
+        transform: rotateY(-20deg) rotateX(-10deg) translateZ(80px);
+    }
+    100% {
+        transform: rotateY(20deg) rotateX(10deg) translateZ(80px);
+    } */
+/* } */
+
+h1 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    text-shadow: 10px 10px 30px #000;
+    animation: neonGlow 2s infinite alternate;
+}
+
+@keyframes neonGlow {
+    from { text-shadow: 0 0 15px #fff; }
+    to { text-shadow: 0 0 30px #ff0, 0 0 50px #ff00ff; }
+}
+
+#search-btn {
+    padding: 18px 35px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #ff00ff, #ff6600);
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 10px 40px rgba(255, 0, 255, 0.8);
+    transition: all 0.3s;
+    animation: ultimatePulse 1.2s infinite alternate;
+}
+
+@keyframes ultimatePulse {
+    from {
+        box-shadow: 0 10px 40px rgba(255, 0, 255, 0.8);
+    }
+    to {
+        box-shadow: 0 20px 60px rgba(255, 255, 0, 0.9);
+    }
+}
+
+.weather-info .icon {
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: #ff0;
+    box-shadow: 0 10px 40px rgba(255, 0, 255, 0.8);
+    animation: cosmicSpin 4s infinite linear, gravityBounce 3s infinite ease-in-out;
+}
+
+@keyframes gravityBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+/* ULTRA MODERN REALISTIC STYLING WITH ADVANCED ANIMATIONS AND GLASSMORPHISM EFFECTS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
+    background-size: 400% 400%;
+    animation: gradientBG 10s infinite alternate ease-in-out;
+    color: #ffffff;
+    perspective: 2000px;
+    overflow: hidden;
+    flex-direction: column;
+    padding: 20px;
+}
+
+@keyframes bgShift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Weather-specific effects */
+.rainy {
+    background: url('rain.gif') center/cover;
+}
+
+.windy {
+    background: url('wind.gif') center/cover;
+}
+
+.cool {
+    background: linear-gradient(-45deg, #87CEEB, #4682B4);
+}
+
+.hot {
+    background: linear-gradient(-45deg, #FF4500, #FF6347);
+}
+
+.humid {
+    background: linear-gradient(-45deg, #3A7BD5, #3A6073);
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.05) rotateY(5deg);
+    box-shadow: 0 15px 80px rgba(0, 255, 255, 0.7);
+}
+
+/* Glowing Text Animation */
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 4px 4px 20px rgba(0, 255, 255, 0.8);
+    animation: textGlow 2s infinite alternate;
+}
+
+@keyframes textGlow {
+    0% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); }
+    100% { text-shadow: 0 0 25px rgba(0, 255, 255, 1), 0 0 50px rgba(0, 255, 255, 0.8); }
+}
+
+/* Search Bar Styling */
+.search {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#city-input {
+    flex: 1;
+    padding: 14px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    transition: 0.4s;
+    min-width: 200px;
+}
+
+#city-input:focus {
+    border-color: #00ffea;
+    box-shadow: 0 0 15px rgba(0, 255, 234, 0.6);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* 3D Button Animation */
+#search-btn {
+    padding: 14px 24px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #00ffea, #008080);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+    animation: pulse 2s infinite;
+    min-width: 150px;
+}
+
+#search-btn:hover {
+    background: linear-gradient(135deg, #008080, #00ffea);
+    transform: scale(1.1) rotateY(10deg);
+    box-shadow: 0 0 25px rgba(0, 255, 234, 0.8);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Weather Info Styling */
+.weather-info {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    animation: fadeInUp 0.6s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.weather-info h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #00ffea;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+    margin-bottom: 10px;
+}
+
+.weather-info p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+.weather-info .temperature {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #000000;
+    text-shadow: 0 0 10px rgba(255, 0, 153, 0.6);
+}
+
+/* 3D Floating Weather Icon */
+.weather-info .icon {
+    width: 120px;
+    height: 120px;
+    margin: 15px auto;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+    color: #00ffea;
+    animation: rotateIcon 3s linear infinite, floating 3s infinite alternate ease-in-out;
+}
+
+@keyframes rotateIcon {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* Responsive Enhancements */
+.container {
+    width: 90%;
+    max-width: 600px;
+    padding: 40px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .search {
+        flex-direction: column;
+    }
+
+    #city-input, #search-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
